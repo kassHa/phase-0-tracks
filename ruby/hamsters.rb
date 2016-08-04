@@ -1,16 +1,16 @@
-puts "What's the hampster name?"
+puts "What's the hamster name?"
 name = gets.chomp
 
-puts "How loud is the hampsted, from 1-10"
+puts "How loud is the hamster, from 1-10"
 volume = gets.chomp.to_i
 
 puts "What's the fur color"
 fur = gets.chomp
 
-puts "Do you think the hampster is good for adoption? (yes/no)"
+puts "Do you think the hamster is good for adoption? (yes/no)"
 adoption = gets.chomp	
 
-puts "What is the hampster's age?"
+puts "What is the hamster's age?"
 user_answer = gets.chomp.to_i	
 age = nil
 
@@ -20,13 +20,13 @@ age = nil
 		age
 	end
 	
-puts "The hampster name is #{name}, it is #{age} years old"
+puts "The hamster name is #{name}, it is #{age} years old"
 
 puts "With a #{fur} fur color"
 
-puts "From 1-10 the hampster's volume is #{volume}"
+puts "From 1-10 the hamster's volume is #{volume}"
 
-puts "Is the hampster good candidate for adoption: #{adoption}"
+puts "Is the hamster good candidate for adoption: #{adoption}"
 
 
 
