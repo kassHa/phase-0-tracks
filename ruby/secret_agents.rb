@@ -11,6 +11,8 @@ def encrypt(string_to_encrypt) # Create a function accepting string variable as 
 	while control < string_to_encrypt.length # check if the control variable is less than length of the passed string. If yes run the code in the while loop
 		if string_to_encrypt[control] == "z" # Because .next that doesn't work well with beginning and ending letters of alphabet check if the current letter is "z" and if so change it to "a" manually
 			string_to_encrypt[control] = "a"
+		elsif string_to_encrypt[control] == " " # If the character is a space, we want to keep it as a space
+			string_to_encrypt[control] = " "
 		else
 			string_to_encrypt[control] = string_to_encrypt[control].next # Retrieve letter from the string that is indexed by control variable, apply .next method to it and reasign to the same place in the string
 		end
@@ -34,9 +36,13 @@ def decrypt(string_to_decrypt) # Create a function accepting string variable as 
 	alphabet_string = "abcdefghijklmnoprstuvwxyz" # Create a string variable that hold entire variable
 	control = 0	# Create a control variable for the loop
 	while control < string_to_decrypt.length # while control variable is less than length of the string do the code in the loop
-		position_in_alphabet = alphabet_string.index(string_to_decrypt[control]) # Retrieve letter from string_to_decrypt indexed by value in the control variable, then find which position in the alhpabet this letter is in and assign to a variable to be used later
-		string_to_decrypt[control] = alphabet_string[(position_in_alphabet-1)] # Retrieve the letter from the alphabet inexe by position_in_alphabet-1, since we want to grab the previous letter in alphabet
-		control = control +1 #Update control variable
+		if string_to_decrypt[control] == " " # if the character is a space keep it as a space
+			string_to_decrypt[control] = " "
+		else
+			position_in_alphabet = alphabet_string.index(string_to_decrypt[control]) # Retrieve letter from string_to_decrypt indexed by value in the control variable, then find which position in the alhpabet this letter is in and assign to a variable to be used later
+			string_to_decrypt[control] = alphabet_string[(position_in_alphabet-1)] # Retrieve the letter from the alphabet inexe by position_in_alphabet-1, since we want to grab the previous letter in alphabet
+		end
+	control = control +1 #Update control variable
 	end
 	return_string = string_to_decrypt
 	return return_string
