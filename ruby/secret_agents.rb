@@ -47,7 +47,6 @@ end
 #puts encrypt("zed")
 #puts decrypt("bcd")
 #puts decrypt("afe")
-
 #puts decrypt(encrypt("swordfish")) # This works because of the way the functions are written; not only the functions encrypts or decrypts the string passes to it, but it also returns created a copy of encrypted or decrypted string. So in this case we first encrypt "swordfish" and return a copy of it being encrypted and then we pass it to decrypt function which decrypts it back
 
 # MAIN PROGRAM PSEUDOCODE
