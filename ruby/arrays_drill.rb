@@ -4,22 +4,13 @@ def build_array(x, y, z)
 	arrays.push(x, y, z)
 end	
 
-#def ad_to_array(par1, par2)
-	#variable = par1
-	#variable << par2
-	#p variable
-#end
-
-#puts ad_to_array([1, 2, 3], 4)	
-
-
-
 def add_to_array(par1, par2)
  array = par1
  array << par2
  p array
 end
 
+puts add_to_array([1, 2, 3], 4)	
 
 
 
