@@ -70,7 +70,7 @@ p house
 house.reject! { |studio| studio == "bedroom"}
 p house 
 
-
+#Hash
 my_hash = {"a" => 1000, "b" => 2000, "c" => 3000}
 p my_hash
 my_hash.reject! { |key, value| key != "c"}
