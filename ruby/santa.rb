@@ -1,5 +1,8 @@
 class Santa
 
+	attr_reader :ethnicity
+	attr_accessor :age,:gender
+
 	def initialize(gender,ethnicity)  #Initialization with 2 arguments for setting class variables ages and ethinicity 
 		puts "Initializing Santa instance..."
 		@gender = gender
@@ -20,10 +23,6 @@ class Santa
 		@age +=1
 	end
 
-	def set_age(new_age) #Method that sets completely new age to santa. Takes integer as argument
-		@age = new_age
-	end
-
 	def get_mad_at(name_reindeer) #Method that takes name of the reindeer (string) and puts that name in the last position of internal @reindeer_ranking
 	    position_in_array = @reindeer_ranking.index(name_reindeer) #Find current index of the reindeer name
 	    last_index_in_array = (@reindeer_ranking.length)-1 #Find the last index in the array. Substracting 1 because arrays are indexed from 0 so last index is actually length of array -1
@@ -35,21 +34,6 @@ class Santa
 		puts @reindeer_ranking
 	end
 
-	def gender=(new_gender)	#Method that takes new gender as input (string) and reasigns it to @gender attribute. We can use it simply by name_instance.gender = "new_name"
-		@gender = new_gender
-	end
-
-	def gender #Method that will return gender of santa
-		return @gender
-	end
-
-	def age #Method that returns age of the santa
-		return @age
-	end
-
-	def ethnicity #Method that returns ethnicity of the santa
-		return @ethnicity
-	end
 
 end
 
@@ -82,7 +66,7 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 1000000.times do |santa_instance| # Create 1000 new instances of santas and store in arrat
 	santa_instance =  Santa.new(example_genders.sample,example_ethnicities.sample) # Create new santa with randomly selected gender and ethnicity
 	random_number = Random.new #Select new random number
-	santa_instance.set_age(random_number.rand(140)) #Set new age of santa instance using random number
+	santa_instance.age = random_number.rand(140) #Set new age of santa instance using random number
 	santas << santa_instance # Add santa instance to an array of santas instances
 end
 
@@ -97,7 +81,7 @@ santas.each do |santa_instance|
 	i+=1 #increment index by 1 
 end
 
-# Wow we created 1000000 santas! on my mac air it takes about 2 minutes to do :)
+# Wow we created million santas! on my mac air it takes about 2 minutes to do :)
 
 
 
