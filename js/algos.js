@@ -48,3 +48,42 @@ function keyValueMatch(obj1, obj2) {
 
   return false;
 }
+
+// Pseudocode: Release 2:
+// Function input: N - number of strings (integer)
+// Function output: array of N random strings
+
+function generateRandomStrings(number) {
+  var array = [];
+  var count = 0;
+
+  while (count < number) {
+    array.push(randomString());
+    count += 1; 
+  }
+  return array;
+}
+
+// Function output: random string of random length
+function randomString() {
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  var length = Math.floor(Math.random() * 10) + 1;
+  var str = "";
+
+  for (var i = 0; i < length; i++) {
+    var lengthOfAlphabet = alphabet.length;
+    str += alphabet[Math.floor(Math.random() * lengthOfAlphabet)];
+  }
+
+  return str;
+}
+
+
+
+
+
+
+
+
+
+
