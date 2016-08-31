@@ -79,6 +79,31 @@ function randomString() {
 }
 
 
+// Driver Code:
+// Release 0:
+var faveThings = ["Labrador", "friends", "summer by the sea", "travels", "Ruby"]; 
+var names = ["JavaScript", "HTML", "CSS", "Python"]
+
+console.log(findLongestWord(faveThings));
+console.log(findLongestWord(names));
+
+
+// Release 1:
+var person1 = {name:"Alice", age:30, eyeColor:"blue"};
+var person2 = {name:"Steven", age:10, eyeColor:"blue"};
+
+console.log("Do they match?", keyValueMatch(person1, person2));
+
+
+// Release 2:
+for(var i=0; i<10; i++) {
+  var randomStrings = generateRandomStrings(3);
+  var longestWord = findLongestWord(randomStrings);
+  console.log("random strings array:", randomStrings);
+  console.log("longest word in array:", longestWord);
+}
+
+
 
 
 
