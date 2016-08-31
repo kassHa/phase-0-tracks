@@ -12,7 +12,7 @@ class Calculator
   end
 
   def divide(x,y)
-  	x/y
+  	x / y
   end
   
 end

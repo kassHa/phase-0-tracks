@@ -11,6 +11,7 @@
 require_relative 'calculator'
 
 describe Calculator do
+  
   let(:calculator) { Calculator.new }
 
   it "adds two integers" do
