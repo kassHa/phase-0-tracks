@@ -1,3 +1,6 @@
+
+								// RELEASE 2 // 
+
 1. Display the information in one table (either table is fine).
 
 sqlite> SELECT * FROM students;
@@ -40,7 +43,15 @@ Arhie|Mr. Booth
 Alex|Mr. Booth
 sqlite> 
 
+									// RELEASE  // 
 
+The Outer Join:
+
+SELECT age FROM students LEFT OUTER JOIN teachers ON teacher_id = teachers.id;
+27
+30
+40
+									
 
 
 
