@@ -1,5 +1,5 @@
 
-								// RELEASE 2 // 
+			// RELEASE 2 // 
 
 1. Display the information in one table (either table is fine).
 
@@ -43,7 +43,7 @@ Arhie|Mr. Booth
 Alex|Mr. Booth
 sqlite> 
 
-									// RELEASE  // 
+			// RELEASE  // 
 
 The Outer Join:
 
