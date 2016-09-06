@@ -8,7 +8,7 @@ create_table_cmd = <<-SQL
     name VARCHAR(255),
     age INT,
     breed VARCHAR(255),
-    adopted BOOLEAN
+    adopted VARCHAR(255)
   )
 SQL
 
@@ -26,6 +26,29 @@ end
 def read_table(db)
 	db.execute("SELECT * FROM dogs")
 end
+
+puts "What would you like to do? add, update or read?"
+
+answer = gets.chomp
+
+if answer == "add"
+	puts "What is the name of the doggie?"
+	name = gets.chomp
+	puts "What is the age?"
+	age = gets.chomp.to_i
+	puts "What is the breed of our new friend?"
+	breed = gets.chomp
+	add_dogs(db, name, age, breed, "no")
+elsif answer == "update"
+	puts "What is the name of the dog that has been adopted?"
+	name = gets.chomp
+	update_dogs(db, name, "yes")
+elsif answer == "read"
+	puts "Here are all your fourleged friends"
+	read_table(db)
+end
+
+
 
 
 
